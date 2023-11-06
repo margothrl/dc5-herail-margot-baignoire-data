@@ -13,5 +13,3 @@ for i in range(1, 51):
 
 for client in liste_clients:
     print(f"Nom : {client['nom']}, Email : {client['email']}, Montant dépensé : {client['montant_depense']}€")
-
-input("Appuyez sur Entrée pour quitter.")
