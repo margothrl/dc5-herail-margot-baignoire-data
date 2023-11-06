@@ -5,8 +5,17 @@ fichier_entree = "ex8-b.txt"
 fichier_sortie = "ex8-b-resultat.txt"
 
 def compter_mots(texte):
-    mots = texte.split()
-    return len(mots)
+    compteur_mots = 0
+    est_dans_un_mot = False
+
+    for caractere in texte:
+        if caractere != ' ' and not est_dans_un_mot:
+            est_dans_un_mot = True
+            compteur_mots += 1
+        elif caractere == ' ':
+            est_dans_un_mot = False
+
+    return compteur_mots
 
 with open(fichier_entree, "r") as file:
     texte = file.read()
